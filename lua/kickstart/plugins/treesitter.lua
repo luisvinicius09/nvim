@@ -51,4 +51,10 @@ return {
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
+  {
+    -- Ref: https://github.com/nvim-treesitter/nvim-treesitter-context
+    'nvim-treesitter/nvim-treesitter-context',
+    enabled = true,
+    opts = {},
+  },
 }

@@ -78,11 +78,7 @@ Kickstart Guide:
 
 If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
 
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now! :)
---]]
+-- ]]
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -127,6 +123,11 @@ vim.opt.undofile = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- vim.opt.incommand = true
+
+-- vim.opt.smartindent = true
+-- vim.opt.autoindent = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
@@ -303,6 +304,8 @@ require('lazy').setup({
   -- require 'kickstart.plugins.yanky'
 
   require 'kickstart.plugins.inc-rename',
+
+  -- require 'kickstart.plugins.bufferline',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

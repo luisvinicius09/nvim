@@ -53,6 +53,7 @@ return {
   },
   {
     -- Ref: https://github.com/nvim-treesitter/nvim-treesitter-context
+    --
     'nvim-treesitter/nvim-treesitter-context',
     enabled = true,
     opts = {},

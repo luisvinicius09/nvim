@@ -1,5 +1,5 @@
 return {
-
+  -- Ref: https://www.josean.com/posts/neovim-linting-and-formatting
   { -- Linting
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },

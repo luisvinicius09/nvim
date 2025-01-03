@@ -91,6 +91,8 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- vim.g.lazyvim_prettier_needs_config = true
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -301,7 +303,6 @@ require('lazy').setup({
 
   require 'kickstart.plugins.lazygit',
   -- require 'kickstart.plugins.grug-far',
-  -- https://github.com/mfussenegger/nvim-lint
   -- https://github.com/windwp/nvim-ts-autotag
   -- require 'kickstart.plugins.yanky'
 

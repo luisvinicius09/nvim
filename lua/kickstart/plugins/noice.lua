@@ -2,6 +2,15 @@ return {
   {
     'folke/noice.nvim',
     event = 'VeryLazy',
+    keys = {
+      {
+        '<leader>nd',
+        function()
+          require('notify').dismiss()
+        end,
+        desc = 'Dismiss Notifications',
+      },
+    },
     opts = {
       -- add any options here
       lsp = {

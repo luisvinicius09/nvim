@@ -7,7 +7,7 @@ return {
       { '<Tab>', '<Cmd>BufferLineCycleNext<CR>', desc = 'Next tab' },
       { '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', desc = 'Prev tab' },
       { '<leader>bp', '<Cmd>BufferLinePickClose<CR>', desc = 'Close tab picked' },
-      { '<leader>bq', '<Cmd>BufferLineClose<CR>', desc = 'Close tab' },
+      { '<leader>bq', ':bdelete<CR>', desc = 'Close tab', { noremap = true, silent = true } },
     },
     opts = {
       options = {

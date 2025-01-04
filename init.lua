@@ -196,6 +196,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<leader>WW', ':w<CR>', { desc = 'Save' })
+vim.keymap.set('n', '<leader>WC', ':w | :bdelete<CR>', { desc = 'Save and Close' })
+vim.keymap.set('n', '<leader>WQ', ':wq<CR>', { desc = 'Save and Quit' })
 vim.keymap.set('n', '<leader>QQ', ':q<CR>', { desc = 'Quit' })
 
 -- [[ Basic Autocommands ]]

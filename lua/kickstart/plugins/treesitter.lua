@@ -59,13 +59,8 @@ return {
     opts = {
       trim_scope = 'inner',
       mode = 'topline',
-      patterns = { -- Match patterns for TS nodes to display in the context window
-        default = {
-          'class',
-          'function',
-          'method',
-        },
-      },
+      -- max_lines = 3,
+      multiline_threshold = 3,
     },
   },
 }

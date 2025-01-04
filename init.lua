@@ -199,6 +199,7 @@ vim.keymap.set('n', '<leader>WW', ':w<CR>', { desc = 'Save' })
 vim.keymap.set('n', '<leader>WC', ':w | :bdelete<CR>', { desc = 'Save and Close' })
 vim.keymap.set('n', '<leader>WQ', ':wq<CR>', { desc = 'Save and Quit' })
 vim.keymap.set('n', '<leader>QQ', ':q<CR>', { desc = 'Quit' })
+vim.keymap.set('n', '<leader>QD', ':e!<CR>', { desc = 'Discard changes' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

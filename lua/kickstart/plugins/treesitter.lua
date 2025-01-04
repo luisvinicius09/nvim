@@ -58,7 +58,7 @@ return {
     enabled = true,
     opts = {
       trim_scope = 'inner',
-      mode = 'topline',
+      mode = 'cursor',
       -- max_lines = 3,
       multiline_threshold = 3,
     },

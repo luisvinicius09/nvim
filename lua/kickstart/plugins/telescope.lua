@@ -64,6 +64,7 @@ return {
           undo = {
             -- telescope-undo.nvim config, see below
           },
+          yank_history = {},
         },
       }
 
@@ -71,6 +72,7 @@ return {
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
       pcall(require('telescope').load_extension, 'undo')
+      pcall(require('telescope').load_extension 'yank_history')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -86,6 +88,7 @@ return {
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>su', '<cmd>Telescope undo<cr>', { desc = '[U]ndo tree' })
       vim.keymap.set('n', '<leader>sb', ':Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[F]ile [B]rowser' })
+      vim.keymap.set('n', '<leader>sy', ':Telescope yank_history<CR>', { desc = '[Y]ank history' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()

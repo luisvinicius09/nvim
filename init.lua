@@ -201,6 +201,11 @@ vim.keymap.set('n', '<leader>WQ', ':wq<CR>', { desc = 'Save and Quit' })
 vim.keymap.set('n', '<leader>QQ', ':q<CR>', { desc = 'Quit' })
 vim.keymap.set('n', '<leader>QD', ':e!<CR>', { desc = 'Discard changes' })
 
+vim.keymap.set('n', '<leader>;', ':normal gcc<CR><DOWN>', { desc = '[/] Toggle comment line' })
+vim.keymap.set('v', '<leader>;', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
+vim.keymap.set('n', "<leader>'", ':normal gcc<CR><DOWN>', { desc = '[/] Toggle comment line' })
+vim.keymap.set('v', "<leader>'", '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -284,8 +289,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
-  -- require 'kickstart/plugins/catppuccin',
+  require 'kickstart/plugins/colorscheme',
 
   require 'kickstart/plugins/todo-comments',
 

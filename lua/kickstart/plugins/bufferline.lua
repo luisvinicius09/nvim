@@ -6,8 +6,8 @@ return {
     keys = {
       { '<Tab>', '<Cmd>BufferLineCycleNext<CR>', desc = 'Next tab' },
       { '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', desc = 'Prev tab' },
-      { '<leader>bp', '<Cmd>BufferLinePickClose<CR>', desc = 'Close tab picked' },
-      { '<leader>bq', ':bdelete<CR>', desc = 'Close tab', { noremap = true, silent = true } },
+      { '<leader>QP', '<Cmd>BufferLinePickClose<CR>', desc = 'Close tab picked' },
+      { '<leader>QT', ':bdelete<CR>', desc = 'Close tab', { noremap = true, silent = true } },
     },
     opts = {
       options = {

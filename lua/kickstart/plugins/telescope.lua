@@ -51,20 +51,24 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+        defaults = {
+          --   mappings = {
+          --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+          --   },
+          vimgrep_arguments = {},
+        },
+        -- pickers = {
+        --   find_files = {
+        --     hidden = true,
         --   },
         -- },
-        pickers = {
-          find_files = {
-            hidden = true,
-          },
-        },
         file_ignore_patterns = {
           'node_modules',
           'build',
           'dist',
+          '%.git/',
+          '^./.git/',
+          '.git/',
         },
         extensions = {
           ['ui-select'] = {

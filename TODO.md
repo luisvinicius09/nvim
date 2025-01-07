@@ -1,0 +1,3 @@
+- [ ] Telescope search hidden files - but be able to hide .git | node_modules ...
+- [ ] Bufferline always show
+- [ ] Neo tree open file when creating it

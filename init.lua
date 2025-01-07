@@ -312,7 +312,9 @@ require('lazy').setup({
   require 'kickstart.plugins.noice',
 
   require 'kickstart.plugins.lazygit',
-  -- require 'kickstart.plugins.grug-far',
+
+  require 'kickstart.plugins.grug-far',
+
   -- https://github.com/windwp/nvim-ts-autotag
   require 'kickstart.plugins.yanky',
 

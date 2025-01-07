@@ -3,3 +3,4 @@
 - [ ] Neo tree open file when creating it
 - [ ] Whichkey display commands in a vertical list instead of horizontal
 - [ ] Bufferline keymap to close other tabs, close all tabs...
+- [ ] Improve keymaps, easiest ones should be the most used ones

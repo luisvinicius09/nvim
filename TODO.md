@@ -1,3 +1,4 @@
 - [ ] Telescope search hidden files - but be able to hide .git | node_modules ...
 - [ ] Bufferline always show
 - [ ] Neo tree open file when creating it
+- [ ] Whichkey display commands in a vertical list instead of horizontal

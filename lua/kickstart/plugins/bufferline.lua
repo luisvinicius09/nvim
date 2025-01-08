@@ -10,6 +10,9 @@ return {
       { '<leader>bp', '<Cmd>BufferLinePickClose<CR>', desc = 'Close tab picked' },
       { '<leader>bh', '<Cmd>BufferLineMovePrev<CR>', desc = 'Move Tab Prev' },
       { '<leader>bl', '<Cmd>BufferLineMoveNext<CR>', desc = 'Move Tab Next' },
+      { '<leader>QH', '<Cmd>BufferLineCloseLeft<CR>', desc = 'Close Tabs To Left' },
+      { '<leader>QL', '<Cmd>BufferLineCloseRight<CR>', desc = 'Close Tabs To Right' },
+      { '<leader>QA', '<Cmd>BufferLineCloseOthers<CR>', desc = 'Close All Other Tabs' },
     },
     opts = {
       options = {

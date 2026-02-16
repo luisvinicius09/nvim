@@ -317,11 +317,11 @@ require('lazy').setup({
 
   require 'kickstart.plugins.bufferline',
 
-  require 'kickstart.plugins.copilot',
+  -- require 'kickstart.plugins.copilot',
 
   require 'kickstart.plugins.comment',
 
-  require 'kickstart.plugins.vim-tmux-navigation',
+  -- require 'kickstart.plugins.vim-tmux-navigation',
 
   require 'kickstart.plugins.toggleterm',
 

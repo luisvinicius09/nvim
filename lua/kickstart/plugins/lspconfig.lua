@@ -13,7 +13,7 @@ return {
       { 'j-hui/fidget.nvim', opts = {} },
 
       -- Allows extra capabilities provided by nvim-cmp
-      'hrsh7th/cmp-nvim-lsp',
+      -- 'hrsh7th/cmp-nvim-lsp',
       'saghen/blink.cmp',
     },
     config = function(_, opts)
@@ -107,6 +107,12 @@ return {
           --  For example, in C this would take you to the header.
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
+          -- VSCode-style keybindings
+          -- map('<C-S-Space>', vim.lsp.buf.hover, 'Hover Documentation (peek definition)')
+          map('<leader>dd', vim.lsp.buf.hover, 'Hover Documentation (peek definition)')
+          map('<leader>.', vim.lsp.buf.code_action, 'Quick Fix / Code Action', { 'n', 'x' })
+          map('<F2>', vim.lsp.buf.rename, 'Rename Symbol')
+
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed
@@ -163,7 +169,8 @@ return {
       --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
       --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      -- capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+      capabilities = vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities())
 
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -179,6 +186,9 @@ return {
         gopls = {},
         pyright = {},
         rust_analyzer = {},
+        html = {},
+        jsonls = {},
+        cssls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -217,6 +227,11 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'prettierd', -- Fast prettier daemon
+        'prettier', -- Fallback formatter for web languages
+        'goimports', -- Go imports organizer + formatter
+        'black', -- Python formatter
+        'isort', -- Python import sorter
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

@@ -201,6 +201,12 @@ vim.keymap.set('n', '<leader>WQ', ':wq<CR>', { desc = 'Save and Quit' })
 vim.keymap.set('n', '<leader>QQ', ':q<CR>', { desc = 'Quit' })
 vim.keymap.set('n', '<leader>QD', ':e!<CR>', { desc = 'Discard changes' })
 
+-- VSCode-style keybindings (useful ones without native nvim equivalents)
+vim.keymap.set('n', '<A-Up>', ':m .-2<CR>==', { desc = 'Move line up', silent = true })
+vim.keymap.set('n', '<A-Down>', ':m .+1<CR>==', { desc = 'Move line down', silent = true })
+vim.keymap.set('v', '<A-Up>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up', silent = true })
+vim.keymap.set('v', '<A-Down>', ":m '>+1<CR>gv=gv", { desc = 'Move selection down', silent = true })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

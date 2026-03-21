@@ -3,6 +3,7 @@ return {
     'akinsho/bufferline.nvim',
     version = '*',
     dependencies = 'nvim-tree/nvim-web-devicons',
+    event = { 'BufReadPre', 'BufNewFile' },
     keys = {
       { '<S-K>', '<Cmd>BufferLineCycleNext<CR>', desc = 'Next tab' },
       { '<S-J>', '<Cmd>BufferLineCyclePrev<CR>', desc = 'Prev tab' },
@@ -10,9 +11,10 @@ return {
       { '<leader>bp', '<Cmd>BufferLinePickClose<CR>', desc = 'Close tab picked' },
       { '<leader>bh', '<Cmd>BufferLineMovePrev<CR>', desc = 'Move Tab Prev' },
       { '<leader>bl', '<Cmd>BufferLineMoveNext<CR>', desc = 'Move Tab Next' },
-      { '<leader>QH', '<Cmd>BufferLineCloseLeft<CR>', desc = 'Close Tabs To Left' },
-      { '<leader>QL', '<Cmd>BufferLineCloseRight<CR>', desc = 'Close Tabs To Right' },
+      -- { '<leader>QH', '<Cmd>BufferLineCloseLeft<CR>', desc = 'Close Tabs To Left' },
+      -- { '<leader>QL', '<Cmd>BufferLineCloseRight<CR>', desc = 'Close Tabs To Right' },
       { '<leader>QA', '<Cmd>BufferLineCloseOthers<CR>', desc = 'Close All Other Tabs' },
+      { '<leader><Tab>', '<Cmd>e #<CR>', desc = 'Toggle previous buffer' },
     },
     opts = {
       options = {

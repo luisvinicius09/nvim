@@ -214,6 +214,15 @@ vim.keymap.set('n', '<leader>WQ', ':wq<CR>', { desc = 'Save and Quit' })
 vim.keymap.set('n', '<leader>QQ', ':q<CR>', { desc = 'Quit' })
 vim.keymap.set('n', '<leader>QD', ':e!<CR>', { desc = 'Discard changes' })
 
+-- Split management
+vim.keymap.set('n', '<leader>|', '<cmd>vsplit<CR>', { desc = 'Split vertical' })
+vim.keymap.set('n', '<leader>-', '<cmd>split<CR>', { desc = 'Split horizontal' })
+vim.keymap.set('n', '<leader>Sc', '<cmd>close<CR>', { desc = 'Close split (keeps buffer)' })
+vim.keymap.set('n', '<leader>So', '<cmd>only<CR>', { desc = 'Close all other splits' })
+
+-- ToggleTerm
+vim.keymap.set({ 'n', 't' }, '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
+
 -- VSCode-style keybindings (useful ones without native nvim equivalents)
 vim.keymap.set('n', '<A-Up>', ':m .-2<CR>==', { desc = 'Move line up', silent = true })
 vim.keymap.set('n', '<A-Down>', ':m .+1<CR>==', { desc = 'Move line down', silent = true })

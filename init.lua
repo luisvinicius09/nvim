@@ -177,6 +177,14 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Discard all changes in current file (git checkout)
+vim.keymap.set('n', '<leader>dx', function()
+  local file = vim.fn.expand '%'
+  vim.fn.system('git checkout -- ' .. vim.fn.shellescape(file))
+  vim.cmd 'edit!'
+  vim.notify('Discarded changes: ' .. file, vim.log.levels.INFO)
+end, { desc = '[D]iscard changes (git checkout)' })
+
 -- Diagnostics: signs + underline only, use keybind to see details
 vim.diagnostic.config {
   virtual_text = false,

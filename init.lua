@@ -242,6 +242,14 @@ vim.keymap.set('n', '<A-Down>', ':m .+1<CR>==', { desc = 'Move line down', silen
 vim.keymap.set('v', '<A-Up>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up', silent = true })
 vim.keymap.set('v', '<A-Down>', ":m '>+1<CR>gv=gv", { desc = 'Move selection down', silent = true })
 
+-- macOS word-wise editing with Option. Requires kitty's macos_option_as_alt so
+-- Option is delivered as Alt (<M-...>); nvim has no default for these.
+vim.keymap.set('i', '<M-BS>', '<C-w>', { desc = 'Delete previous word' })
+vim.keymap.set('c', '<M-BS>', '<C-w>', { desc = 'Delete previous word' })
+-- opt+left / opt+right move by word
+vim.keymap.set({ 'n', 'i' }, '<M-Left>', '<C-Left>', { desc = 'Move back a word' })
+vim.keymap.set({ 'n', 'i' }, '<M-Right>', '<C-Right>', { desc = 'Move forward a word' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -333,7 +341,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/treesitter',
 
-  -- require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.debug',
 
   require 'kickstart.plugins.indent_line',
 
